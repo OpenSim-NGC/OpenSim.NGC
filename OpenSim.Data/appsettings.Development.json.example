@@ -1,0 +1,13 @@
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  },
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "OpenSimDatabase": "server=192.168.1.241; port=3306; database=opensim; user=opensim; password=*M1ke.Chase*;"
+  }
+}

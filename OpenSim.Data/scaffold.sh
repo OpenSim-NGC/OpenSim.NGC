@@ -1,0 +1,1 @@
+dotnet ef dbcontext scaffold "server=192.168.1.241; port=3306; database=opensim; user=opensim; password=*M1ke.Chase*;" MySql.EntityFrameworkCore --context OpenSimDatabaseContext --schema opensim -o Models -f

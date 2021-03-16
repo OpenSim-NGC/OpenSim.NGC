@@ -1,0 +1,65 @@
+To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+The column 'opensim.agentprefs.LanguageIsPublic' would normally be mapped to a non-nullable bool property, but it has a default constraint. Such a column is mapped to a nullable bool property to allow a difference between setting the property to false and invoking the default constraint. See https://go.microsoft.com/fwlink/?linkid=851278 for details.
+Could not find type mapping for column 'opensim.gloebitsubscriptions.cTime' with data type 'timestamp'. Skipping column.
+Unable to scaffold the index 'ix_cts'. The following columns could not be scaffolded: cTime.
+Could not find type mapping for column 'opensim.gloebittransactions.cTime' with data type 'timestamp'. Skipping column.
+Could not find type mapping for column 'opensim.gloebittransactions.enactedTime' with data type 'timestamp'. Skipping column.
+Could not find type mapping for column 'opensim.gloebittransactions.finishedTime' with data type 'timestamp'. Skipping column.
+Unable to scaffold the index 'ix_cts'. The following columns could not be scaffolded: cTime.
+Could not find type mapping for column 'opensim.hg_traveling_data.TMStamp' with data type 'timestamp'. Skipping column.
+Could not find type mapping for column 'opensim.im_offline.TMStamp' with data type 'timestamp'. Skipping column.
+Could not find type mapping for column 'opensim.os_groups_invites.TMStamp' with data type 'timestamp'. Skipping column.
+Could not find type mapping for column 'opensim.presence.LastSeen' with data type 'timestamp'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.water_color_r' with data type 'float(9,6) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.water_color_g' with data type 'float(9,6) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.water_color_b' with data type 'float(9,6) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.water_fog_density_exponent' with data type 'float(9,7) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.underwater_fog_modifier' with data type 'float(9,8) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.reflection_wavelet_scale_1' with data type 'float(9,7) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.reflection_wavelet_scale_2' with data type 'float(9,7) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.reflection_wavelet_scale_3' with data type 'float(9,7) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.fresnel_scale' with data type 'float(9,8) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.fresnel_offset' with data type 'float(9,8) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.refract_scale_above' with data type 'float(9,8) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.refract_scale_below' with data type 'float(9,8) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.blur_multiplier' with data type 'float(9,8) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.horizon_r' with data type 'float(9,8) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.horizon_g' with data type 'float(9,8) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.horizon_b' with data type 'float(9,8) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.horizon_i' with data type 'float(9,8) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.haze_horizon' with data type 'float(9,8) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.blue_density_r' with data type 'float(9,8) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.blue_density_g' with data type 'float(9,8) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.blue_density_b' with data type 'float(9,8) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.blue_density_i' with data type 'float(9,8) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.haze_density' with data type 'float(9,8) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.density_multiplier' with data type 'float(9,8) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.distance_multiplier' with data type 'float(9,6) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.sun_moon_color_r' with data type 'float(9,8) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.sun_moon_color_g' with data type 'float(9,8) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.sun_moon_color_b' with data type 'float(9,8) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.sun_moon_color_i' with data type 'float(9,8) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.sun_moon_position' with data type 'float(9,8) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.ambient_r' with data type 'float(9,8) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.ambient_g' with data type 'float(9,8) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.ambient_b' with data type 'float(9,8) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.ambient_i' with data type 'float(9,8) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.east_angle' with data type 'float(9,8) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.sun_glow_focus' with data type 'float(9,8) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.sun_glow_size' with data type 'float(9,8) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.scene_gamma' with data type 'float(9,7) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.star_brightness' with data type 'float(9,8) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.cloud_color_r' with data type 'float(9,8) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.cloud_color_g' with data type 'float(9,8) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.cloud_color_b' with data type 'float(9,8) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.cloud_color_i' with data type 'float(9,8) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.cloud_x' with data type 'float(9,8) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.cloud_y' with data type 'float(9,8) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.cloud_density' with data type 'float(9,8) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.cloud_coverage' with data type 'float(9,8) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.cloud_scale' with data type 'float(9,8) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.cloud_detail_x' with data type 'float(9,8) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.cloud_detail_y' with data type 'float(9,8) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.regionwindlight.cloud_detail_density' with data type 'float(9,8) unsigned'. Skipping column.
+Could not find type mapping for column 'opensim.tokens.validity' with data type 'datetime'. Skipping column.
+Unable to scaffold the index 'validity'. The following columns could not be scaffolded: validity.
