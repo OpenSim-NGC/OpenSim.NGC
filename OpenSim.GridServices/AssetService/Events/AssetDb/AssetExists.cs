@@ -19,9 +19,9 @@ namespace OpenSim.GridServices.AssetService.Events.AssetDb
 
         public class Command : IRequestHandler<Request, bool>
         {
-            private readonly OpenSimDatabaseContext _database;
+            private readonly AssetsDatabaseContext _database;
 
-            public Command(OpenSimDatabaseContext database)
+            public Command(AssetsDatabaseContext database)
             {
                 this._database = database;
             }

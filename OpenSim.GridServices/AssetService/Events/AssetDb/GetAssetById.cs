@@ -18,10 +18,10 @@ namespace OpenSim.GridServices.AssetService.Events.AssetDb
 
         public class Command : IRequestHandler<Request, AssetDto>
         {
-            private readonly OpenSimDatabaseContext _database;
+            private readonly AssetsDatabaseContext _database;
             private readonly IMapper _mapper;
 
-            public Command(OpenSimDatabaseContext database, IMapper mapper)
+            public Command(AssetsDatabaseContext database, IMapper mapper)
             {
                 this._database = database;
                 this._mapper = mapper;

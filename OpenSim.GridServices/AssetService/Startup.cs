@@ -25,7 +25,7 @@ namespace OpenSim.GridServices.AssetService
         public void ConfigureServices(IServiceCollection services)
         {
             var connectionString = Configuration.GetConnectionString("OpenSimDatabase");
-            services.AddDbContext<OpenSimDatabaseContext>(opt => opt.UseMySQL(connectionString));
+            services.AddDbContext<AssetsDatabaseContext>(opt => opt.UseMySQL(connectionString));
 
             services.AddMediatR(Assembly.GetExecutingAssembly());
 	        services.AddAutoMapper(typeof(Startup));
