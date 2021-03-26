@@ -8,6 +8,7 @@ using MediatR;
 
 using OpenSim.GridServices.AssetService.Events.AssetDb;
 using OpenSim.GridServices.AssetService.Models;
+using System.Collections.Generic;
 
 namespace AssetService.Controllers
 {
@@ -22,6 +23,16 @@ namespace AssetService.Controllers
             _mediator = mediator;
         }
 
+        // GET: assets
+        // Returns HTML message about who we are
+        [HttpGet]
+        public ActionResult GetIndex()
+        {
+            return base.Content(
+                "<html><head><title>OpenSimulator NGC Assets Server</title></head><body><h1>OpenSimulator Assets Server</h1></body></html>", 
+                "text/html");
+        }
+
         // GET: assets/<asset-id>
         [HttpGet("{id}")]
         public async Task<ActionResult<AssetDto>> GetAsset(string id)
@@ -32,86 +43,63 @@ namespace AssetService.Controllers
 
             return asset;
         }
-/*
-        // PUT: assets/id
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutAsset(string id, Asset asset)
-        {
-            if (id != asset.Id)
-            {
-                return BadRequest();
-            }
 
-            _context.Entry(asset).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!AssetExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
-        }
-*/
-/*
-        // POST: assets/AssetService
+        // POST: assets
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Asset>> PostAsset(Asset asset)
+        public async Task<ActionResult<Asset>> PostAsset(AssetDto asset)
         {
-            _context.Assets.Add(asset);
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateException)
-            {
-                if (AssetExists(asset.Id))
-                {
-                    return Conflict();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return CreatedAtAction("GetAsset", new { id = asset.Id }, asset);
+            return BadRequest();
         }
-*/
-/*
-        // DELETE: assets/id
+
+        // GET: assets/{id}/metadata
+        [HttpHead("{id}")]
+        [HttpGet("{id}/metadata")]
+        public async Task<ActionResult<AssetDto>> GetAssetMetaData(string id)
+        {
+            var asset = await _mediator.Send(new GetAssetById.Request { Id = id });
+            if (asset == null)
+                return NotFound();
+
+            return asset;
+        }
+
+        // GET: assets/{id}/data
+        [HttpGet("{id}/data")]
+        public async Task<ActionResult<AssetDto>> GetAssetData(string id)
+        {
+            var asset = await _mediator.Send(new GetAssetById.Request { Id = id });
+            if (asset == null)
+                return NotFound();
+
+            return asset;
+        }
+
+        // PUT: assets/{id}
+        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [HttpPut("{id}")]
+        public async Task<IActionResult> AssetUpdate(string id, Asset asset)
+        {
+            return BadRequest();
+        }
+
+        // DELETE: assets/{id}
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteAsset(string id)
         {
-            var asset = await _context.Assets.FindAsync(id);
-            if (asset == null)
+            return BadRequest();
+        }
+
+        // GET: /get_assets_exists
+        [HttpGet("/get_assets_exist")]
+        public async Task<ActionResult<AssetDto>> GetAssetsExist(List<string> ids)
+        {
+            if (ids is null)
             {
-                return NotFound();
+                throw new System.ArgumentNullException(nameof(ids));
             }
 
-            _context.Assets.Remove(asset);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
+            return NotFound();
         }
-*/
-/*
-        private async Task<bool> AssetExists(string id)
-        {
-            return await _mediator.Send(new AssetExists.Request { Id = id });
-        }
-*/
     }
 }

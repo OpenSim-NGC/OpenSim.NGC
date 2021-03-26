@@ -24,7 +24,15 @@ namespace OpenSim.GridServices.AssetService
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            /*
+            // Get the connection string for the database.  If a specific store was 
+            // specified for assets use that otherwise we'll open the default db.
+            */
             var connectionString = Configuration.GetConnectionString("OpenSimDatabase");
+            var assetdbConnection = Configuration.GetConnectionString("AssetsDatabaseConnection");
+            if (assetdbConnection != null)
+                connectionString = assetdbConnection;
+
             services.AddDbContext<AssetsDatabaseContext>(opt => opt.UseMySQL(connectionString));
 
             services.AddMediatR(Assembly.GetExecutingAssembly());
